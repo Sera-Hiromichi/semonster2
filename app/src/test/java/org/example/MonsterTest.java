@@ -18,4 +18,11 @@ public class MonsterTest {
     String expected = "ドラゴン";
     assertEquals(expected, monster.summonMonster(2));
   }
+
+  @Test
+  public void testDragonMonster() {
+    Monster monster = new Monster();
+    String expected = "どらぴっぴ";
+    assertEquals(expected, monster.doragonName());
+  }
 }

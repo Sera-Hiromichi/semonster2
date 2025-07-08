@@ -22,4 +22,12 @@ public class Monster {
 
     return this.name + ":レア度[" + this.rare + "]";
   }
+
+  public String doragonName() {
+    if (this.name == "ドラゴン") {
+      return "どらぴっぴ";
+    } else {
+      return null;
+    }
+  }
 }

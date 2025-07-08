@@ -1,6 +1,6 @@
 package org.example;
 
-import java.util.Random;
+// import java.util.Random;
 
 public class Monster {
   String name;
@@ -8,14 +8,14 @@ public class Monster {
 
   Monster() {
     // Random random = new Random();
-    this.name = "スライム";
-    this.rare = 2;
+    this.name = this.summonMonster(2);
+    this.rare = 4;
   }
 
-  // String summonMonster(int mnumber) {
-  //   String monsters[] = { "スライム", "サハギン", "ドラゴン", "デュラハン", "シーサーペント" };
-  //   return monsters[mnumber];
-  // }
+  String summonMonster(int mnumber) {
+    String monsters[] = { "スライム", "サハギン", "ドラゴン", "デュラハン", "シーサーペント" };
+    return monsters[mnumber];
+  }
 
   @Override
   public String toString() {

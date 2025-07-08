@@ -5,10 +5,17 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class MonsterTest {
- @Test
+  @Test
   public void testToString() {
     Monster monster = new Monster();
-    String expected = "スライム:レア度[2]";
-    assertEquals(expected,monster.toString());
+    String expected = "ドラゴン:レア度[4]";
+    assertEquals(expected, monster.toString());
+  }
+
+  @Test
+  public void testsummonMonster() {
+    Monster monster = new Monster();
+    String expected = "ドラゴン";
+    assertEquals(expected, monster.summonMonster(2));
   }
 }

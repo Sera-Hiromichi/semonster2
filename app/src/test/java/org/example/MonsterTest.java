@@ -39,11 +39,25 @@ public class MonsterTest {
   }
 
   @Test
+
+  public void testAttackString() {
+    Monster monster = new Monster();
+    String expected = "Dragon's attack : 5point";
+    assertEquals(expected, monster.attackString());
+  }
+
+  @Test
+  public void testSpecialAttackString() {
+    Monster monster = new Monster();
+    String expected = "Dragon's Roar";
+    assertEquals(expected, monster.specialAttack());
+
   public void testMonsterHp() {
     Monster monster = new Monster();
     int expected = 12;
     // Dragonの場合基礎HPは8、rareの値だけ加算するのでHPは12になる
     // Monsterクラスのrareの値は4で固定されている
     assertEquals(expected, monster.setHp());
+
   }
 }

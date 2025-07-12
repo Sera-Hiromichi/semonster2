@@ -5,6 +5,8 @@ package org.example;
 public class Monster {
   String name;
   int rare;// 1:normal,2:uncommon,3:rare,4:ultra rare
+
+  int attackpoint;
   int test;
   int hp;
 
@@ -12,6 +14,7 @@ public class Monster {
     // Random random = new Random();
     this.name = this.summonMonster(2);
     this.rare = 4;
+    this.attackpoint = 5;
     this.hp = this.setHp();
   }
 
@@ -41,6 +44,24 @@ public class Monster {
     }
   }
 
+  public String attackString() {
+    return this.name + "'s attack : " + Integer.toString(this.attackpoint) + "point";
+  }
+
+  public String specialAttack() {
+    if (this.name.equals("Dragon")){
+      return "Dragon's Roar";
+    } else if (this.name.equals("Slime")) {
+      return "Poison Mist";
+    } else if (this.name.equals("Sahagin")) {
+      return "Spirit Surge";
+    } else if (this.name.equals("Seaserpent")) {
+      return " Water Curse";
+    } else if (this.name.equals("Durahan")) {
+      return "Death Sentence";
+    } else {
+      return null;
+    }
   public int setHp() {
     int hp = 0;
     if (this.name.equals("Dragon")) {
@@ -55,5 +76,6 @@ public class Monster {
       hp = 0;
     }
     return hp + this.rare;
+
   }
 }

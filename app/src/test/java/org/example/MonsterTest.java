@@ -32,4 +32,11 @@ public class MonsterTest {
     String expected = "ドラゴンの攻撃 : 5ポイント";
     assertEquals(expected, monster.attackString());
   }
+
+  @Test
+  public void testSpecialAttackString() {
+    Monster monster = new Monster();
+    String expected = "Dragon's Roar";
+    assertEquals(expected, monster.specialAttack());
+  }
 }

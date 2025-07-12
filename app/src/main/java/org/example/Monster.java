@@ -36,4 +36,20 @@ public class Monster {
   public String attackString() {
     return this.name + "の攻撃 : " + Integer.toString(this.attackpoint) + "ポイント";
   }
+
+  public String specialAttack() {
+    if (this.name == "ドラゴン") {
+      return "Dragon's Roar";
+    } else if (this.name == "スライム") {
+      return "Poison Mist";
+    } else if (this.name == "サハギン") {
+      return "Spirit Surge";
+    } else if (this.name == "シーサーペント") {
+      return " Water Curse";
+    } else if (this.name == "デュラハン") {
+      return "Death Sentence";
+    } else {
+      return null;
+    }
+  }
 }

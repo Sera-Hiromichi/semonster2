@@ -5,10 +5,21 @@ package org.example;
 
 public class App {
   public String getGreeting() {
-    return "こんにちは SEMonster";
+    return "Hello SEMonster";
   }
 
   public static void main(String[] args) {
+    if (args.length != 0) {
+      Monster monster = new Monster();
+      System.out.println(monster.toString());
+      Monster monster2 = new Monster();
+      System.out.println(monster2.toString());
+      System.out.println("Go! MergeMonsterrrr!!!!");
+      Monster Mazimon = new Monster();
+      System.out.println(Mazimon.toString());
+    }
     System.out.println(new App().getGreeting());
+    Monster monster = new Monster();
+    System.out.println(monster.toString());
   }
 }

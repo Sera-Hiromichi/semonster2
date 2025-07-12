@@ -30,12 +30,12 @@ public class MonsterTest {
     assertEquals(expectedname, Mazimon.name);
     assertEquals(expectedrare, Mazimon.rare);
   }
-  
+
   @Test
-  public void testDragonMonster() {
+  public void testMonsterNickname() {
     Monster monster = new Monster();
     String expected = "Drapippi";
-    assertEquals(expected, monster.doragonName());
+    assertEquals(expected, monster.monsterNickname());
   }
 
   @Test
@@ -51,6 +51,7 @@ public class MonsterTest {
     Monster monster = new Monster();
     String expected = "Dragon's Roar";
     assertEquals(expected, monster.specialAttack());
+  }
 
   public void testMonsterHp() {
     Monster monster = new Monster();

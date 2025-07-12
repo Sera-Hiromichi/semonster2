@@ -5,29 +5,47 @@ package org.example;
 public class Monster {
   String name;
   int rare;// 1:normal,2:uncommon,3:rare,4:ultra rare
+  int hp;
 
   Monster() {
     // Random random = new Random();
     this.name = this.summonMonster(2);
     this.rare = 4;
+    this.hp = this.setHp();
   }
 
   String summonMonster(int mnumber) {
-    String monsters[] = { "スライム", "サハギン", "ドラゴン", "デュラハン", "シーサーペント" };
+    String monsters[] = { "Slime", "Sahagin", "Dragon", "Durahan", "Seaserpent" };
     return monsters[mnumber];
   }
 
   @Override
   public String toString() {
 
-    return this.name + ":レア度[" + this.rare + "]";
+    return this.name + ":rare[" + this.rare + "], HP[" + this.hp + "]";
   }
 
   public String doragonName() {
-    if (this.name == "ドラゴン") {
-      return "どらぴっぴ";
+    if (this.name == "Dragon") {
+      return "Drapippi";
     } else {
       return null;
     }
+  }
+
+  public int setHp() {
+    int hp = 0;
+    if (this.name.equals("Dragon")) {
+      hp = 8;
+    } else if (this.name.equals("Durahan")) {
+      hp = 6;
+    } else if (this.name.equals("Seaserpent")) {
+      hp = 4;
+    } else if (this.name.equals("Sahagin")) {
+      hp = 2;
+    } else if (this.name.equals("Slime")) {
+      hp = 0;
+    }
+    return hp + this.rare;
   }
 }

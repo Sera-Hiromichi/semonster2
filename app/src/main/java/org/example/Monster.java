@@ -11,7 +11,7 @@ public class Monster {
     // Random random = new Random();
     this.name = this.summonMonster(2);
     this.rare = 4;
-    this.hp = this.setHp(name, rare);
+    this.hp = this.setHp();
   }
 
   String summonMonster(int mnumber) {
@@ -22,7 +22,7 @@ public class Monster {
   @Override
   public String toString() {
 
-    return this.name + ":rare[" + this.rare + "]";
+    return this.name + ":rare[" + this.rare + "], HP[" + this.hp + "]";
   }
 
   public String doragonName() {
@@ -33,19 +33,19 @@ public class Monster {
     }
   }
 
-  public int setHp(String name, int rare) {
+  public int setHp() {
     int hp = 0;
-    if (name.equals("Dragon")) {
+    if (this.name.equals("Dragon")) {
       hp = 8;
-    } else if (name.equals("Durahan")) {
+    } else if (this.name.equals("Durahan")) {
       hp = 6;
-    } else if (name.equals("Seaserpent")) {
+    } else if (this.name.equals("Seaserpent")) {
       hp = 4;
-    } else if (name.equals("Sahagin")) {
+    } else if (this.name.equals("Sahagin")) {
       hp = 2;
-    } else if (name.equals("Slime")) {
+    } else if (this.name.equals("Slime")) {
       hp = 0;
     }
-    return hp + rare;
+    return hp + this.rare;
   }
 }

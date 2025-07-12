@@ -20,6 +20,18 @@ public class MonsterTest {
   }
 
   @Test
+  public void testMergeMonster() {
+    Monster monster = new Monster();
+    Monster monster2 = new Monster();
+    Monster Mazimon = new Monster();
+    Mazimon.MergeMonster(monster, monster2);
+    String expectedname = "Dragon";
+    int expectedrare = 8;
+    assertEquals(expectedname, Mazimon.name);
+    assertEquals(expectedrare, Mazimon.rare);
+  }
+  
+  @Test
   public void testDragonMonster() {
     Monster monster = new Monster();
     String expected = "Drapippi";

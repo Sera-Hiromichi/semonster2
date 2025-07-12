@@ -5,6 +5,7 @@ package org.example;
 public class Monster {
   String name;
   int rare;// 1:normal,2:uncommon,3:rare,4:ultra rare
+  int test;
   int hp;
 
   Monster() {
@@ -17,6 +18,13 @@ public class Monster {
   String summonMonster(int mnumber) {
     String monsters[] = { "Slime", "Sahagin", "Dragon", "Durahan", "Seaserpent" };
     return monsters[mnumber];
+  }
+
+  void MergeMonster(Monster a, Monster b) {
+    String newa = a.name.substring(0, a.name.length() / 2);
+    String newb = b.name.substring(b.name.length() / 2, b.name.length());
+    this.name = newa.concat(newb);
+    this.rare = a.rare + b.rare;
   }
 
   @Override

@@ -36,9 +36,17 @@ public class Monster {
     return this.name + ":rare[" + this.rare + "], HP[" + this.hp + "]";
   }
 
-  public String doragonName() {
-    if (this.name == "Dragon") {
+  public String monsterNickname() {
+    if (this.name.equals("Dragon")) {
       return "Drapippi";
+    } else if (this.name.equals("Slime")) {
+      return "Surarin";
+    } else if (this.name.equals("Sahagin")) {
+      return "Uotami";
+    } else if (this.name.equals("Seaserpent")) {
+      return "Umihebi";
+    } else if (this.name.equals("Durahan")) {
+      return "Kaonasi";
     } else {
       return null;
     }
@@ -49,7 +57,7 @@ public class Monster {
   }
 
   public String specialAttack() {
-    if (this.name.equals("Dragon")){
+    if (this.name.equals("Dragon")) {
       return "Dragon's Roar";
     } else if (this.name.equals("Slime")) {
       return "Poison Mist";
@@ -62,6 +70,8 @@ public class Monster {
     } else {
       return null;
     }
+  }
+
   public int setHp() {
     int hp = 0;
     if (this.name.equals("Dragon")) {
